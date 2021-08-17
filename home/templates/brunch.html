@@ -121,6 +121,23 @@
                   <span class="visually-hidden">Suivant</span>
                 </button>
               </div>
+        
+        
+                <h3 class="presentation">Reservation</h3>
+        <div class="formulaire-edit">
+        <div class="form-group">
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+
+            <p>{{form.as_p}}</p>
+
+            <div class="button-edit">
+            <button type="submit" class="save_btn">RESERVER</button>
+            </div>
+
+        </form>
+        </div>
+        </div>
 
 
         <br><br>
