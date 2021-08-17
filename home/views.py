@@ -48,3 +48,7 @@ def ceremonie(request):
     return render(request, 'ceremonie.html')
 
 
+def contact(request):
+    return render(request, 'contact.html')
+
+
