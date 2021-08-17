@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation</title>
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <!-- header -->
+        <header>
+            <div class = "head-top">
+                <div class = "site-name">
+                    <span><a href="{% url 'home:accueil' %}">OCEANIUM Dakar</a></span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>
+            </div>
+
+        </header>
+        <!-- end of header -->
+
+        <!-- side navbar -->
+        <div class = "sidenav" id = "sidenav">
+            <span class = "cancel-btn" id = "cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+            <ul class = "navbar">
+                <li><a href = "{% url 'home:accueil' %}">Acceuil</a></li>
+                <li><a href = "{% url 'home:bar_restaurant' %}">Bar/Resto</a></li>
+                <li><a href = "{% url 'home:evenement' %}">Evènements</a></li>
+                <li><a href = "{% url 'home:brunch' %}">Brunch</a></li>
+                <li><a href = "{% url 'home:ceremonie' %}">Ceremonie</a></li>
+            </ul>
+        </div>
+        <!-- end of side navbar -->
+
+
+        <h3>Confirmation de reservation</h3>
+
+        <div class="confirmation">
+            <p>Bonjour, <br>
+        Votre réservation a été bien prise en charge par notre service.<br>
+        Vous recevrez un mail de validation sur votre messagerie email.<br>
+        L'équipe Océanium vous dit à bientôt.<br>
+        Cordialement.</p>
+
+            <a href="{% url 'home:accueil' %}"><button type = "button" class = "btn">Accueil</button></a>
+        </div>
+
+
+
+
+
+
+            <br><br>
+
+
+          <!-- footer -->
+        <footer class = "footer">
+            <div class = "footer-container">
+                <div>
+                    <h2>A propos </h2>
+                    <p>JetCafeBeach</p>
+                        <img src = "/static/images/logo.JPG" width="150" height="100" alt = "logo image">
+
+
+                </div>
+
+                <div>
+                    <h2>Administration</h2>
+                    <div class="f">
+                        <a href="{% url 'admin:index' %}">Admin</a><br>
+                    </div>
+
+                </div>
+
+                <div>
+                    <h2>Adresse</h2>
+                    <p>Rue ng-172, Dakar, Sénégal<br>
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                        </span>
+                    Itinéraire:
+                       <br> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.50891198275!2d-17.521926985629353!3d14.740334477589847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec112dbf3eb0f17%3A0x18cf60e13c73a58b!2sJet%20Caf%C3%A9%20Beach!5e0!3m2!1sfr!2sfr!4v1629058304824!5m2!1sfr!2sfr" width="200" height="90" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </p>
+
+                </div>
+
+                <div>
+                    <h2>Contat</h2>
+                    <div class = "contact-item">
+
+                        <p>
+                            JetCafeBeach, Dakar
+                        <p>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span>
+                            +221 77 989 73 86
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            jetcafebeach@gmail.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul class = "social-icons">
+                    <li class = "flex">
+                        <a href="https://twitter.com/hashtag/jetcafebeach" target="_blank"><i class = "fa fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li class = "flex">
+                        <a href="https://www.facebook.com/jetcafebeach" target="_blank"><i class = "fa fa-facebook fa-2x"></i></a>
+                    </li>
+                    <li class = "flex">
+                        <a href="https://www.instagram.com/jetcafebeach" target="_blank"><i class = "fa fa-instagram fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyright normal">Copyright © Noah & Lumi WebAgencey <span class="colored">Tous droits réservés.</span></p>
+        </footer>
+        <!-- end of footer -->
+
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bar | Restaurant</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        <link rel = "icon" href = "images/logo.png" type = "image/png">
+    </head>
+    <body>
+
+        <!-- header -->
+        <header>
+            <div class = "head-top">
+                <div class = "site-name">
+                    <span><a href="{% url 'home:accueil' %}">JetCafeBeach Dakar</a></span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>
+            </div>
+
+        </header>
+        <!-- end of header -->
+
+        <!-- side navbar -->
+        <div class = "sidenav" id = "sidenav">
+            <span class = "cancel-btn" id = "cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+            <ul class = "navbar">
+                <li><a href = "{% url 'home:accueil' %}">Acceuil</a></li>
+                <li><a href = "{% url 'home:bar_restaurant' %}">Bar/Resto</a></li>
+                <li><a href = "{% url 'home:evenement' %}">Evènements</a></li>
+                <li><a href = "{% url 'home:brunch' %}">Brunch</a></li>
+                <li><a href = "{% url 'home:ceremonie' %}">Ceremonie</a></li>
+            </ul>
+
+        </div>
+        <!-- end of side navbar -->
+            <br>
+
+
+            <div class="description">
+                <h1>Bar-Restaurant</h1>
+                <p>Située en bordure de mer, l’équipe du JetCafeBeach vous accueille dans un cadre époustouflant et convivial toute l’année.</p>
+            </div>
+
+            <div class="menu">
+            <a href="{% url 'home:menu_jour'%}"><button>MENU</button></a>
+            </div>
+
+
+            <br><br>
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/static/images/restojet.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/images/restojet1.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/images/restojet2.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/images/restojet3.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Avant</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+
+              <br><br>
+
+
+         <!-- footer -->
+        <footer class = "footer">
+            <div class = "footer-container">
+                <div>
+                    <h2>A propos </h2>
+                    <p>JetCafeBeach</p>
+                        <img src = "/static/images/logo.JPG" width="150" height="100" alt = "logo image">
+
+
+                </div>
+
+                <div>
+                    <h2>Administration</h2>
+                    <div class="f">
+                        <a href="{% url 'admin:index' %}">Admin</a><br>
+                    </div>
+
+                </div>
+
+                <div>
+                    <h2>Adresse</h2>
+                    <p>Rue ng-172, Dakar, Sénégal<br>
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                        </span>
+                    Itinéraire:
+                       <br> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.50891198275!2d-17.521926985629353!3d14.740334477589847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec112dbf3eb0f17%3A0x18cf60e13c73a58b!2sJet%20Caf%C3%A9%20Beach!5e0!3m2!1sfr!2sfr!4v1629058304824!5m2!1sfr!2sfr" width="200" height="90" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </p>
+
+                </div>
+
+                <div>
+                    <h2>Contat</h2>
+                    <div class = "contact-item">
+
+                        <p>
+                            JetCafeBeach, Dakar
+                        <p>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span>
+                            +221 77 989 73 86
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            jetcafebeach@gmail.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul class = "social-icons">
+                    <li class = "flex">
+                        <a href="https://twitter.com/hashtag/jetcafebeach" target="_blank"><i class = "fa fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li class = "flex">
+                        <a href="https://www.facebook.com/jetcafebeach" target="_blank"><i class = "fa fa-facebook fa-2x"></i></a>
+                    </li>
+                    <li class = "flex">
+                        <a href="https://www.instagram.com/jetcafebeach" target="_blank"><i class = "fa fa-instagram fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyright normal">Copyright © Noah & Lumi WebAgencey <span class="colored">Tous droits réservés.</span></p>
+        </footer>
+        <!-- end of footer -->
+
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

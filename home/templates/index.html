@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JetCafeBeach | Dakar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        <link rel = "icon" href = "images/logo.png" type = "image/png">
+    </head>
+    <body>
+
+        <!-- header -->
+        <header class = "header" id = "header">
+            <div class = "head-top">
+                <div class = "site-name">
+                    <span>JetCafeBeach Dakar</span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>
+            </div>
+
+            <div class = "head-bottom flex">
+                <h2>RESTAURANT - BAR - TRAITEUR - BRUNCH</h2>
+                <p>Un cadre idyllique, les pieds dans l'Atlantique</p>
+                <button type = "button" class = "head-btn">ENTER</button>
+            </div>
+        </header>
+        <!-- end of header -->
+
+        <!-- side navbar -->
+        <div class = "sidenav" id = "sidenav">
+            <span class = "cancel-btn" id = "cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+            <ul class = "navbar">
+                <li><a href = "{% url 'home:accueil' %}">Accueil</a></li>
+                <li><a href = "{% url 'home:bar_restaurant' %}">Bar/Resto</a></li>
+                <li><a href = "{% url 'home:evenement' %}">Evènements</a></li>
+                <li><a href = "{% url 'home:brunch' %}">Brunch</a></li>
+                <li><a href = "{% url 'home:ceremonie' %}">Ceremonie</a></li>
+            </ul>
+        </div>
+        <!-- end of side navbar -->
+
+        <!-- fullscreen modal -->
+        <div id = "modal"></div>
+        <!-- end of fullscreen modal -->
+
+        <!-- body content  -->
+        <section class = "services sec-width" id = "services">
+            <div class = "title">
+                <h2>Présentation</h2>
+            </div>
+            <div class = "services-container">
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-utensils"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Bar-Restaurant</h2>
+                        <p>Située en bordure de mer, l’équipe du Jet vous accueille toute l'année dans un cadre idyllique.</p>
+                        <a href="{% url 'home:bar_restaurant'%}"><button type = "button" class = "btn">Plus</button></a>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-swimming-pool"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Célébrations</h2>
+                        <p>Nous faisons de votre cérémonie une vraie réussite et un souvenir inoubliable.</p>
+                        <a href="#"><button type = "button" class = "btn">Plus</button></a>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-utensils"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Brunch</h2>
+                        <p>Le summer brunch du Jet, un brunch de folie à partir du 10 juillet et durant tout l'été. </p>
+                        <a href="#"><button type = "button" class = "btn">Plus</button></a>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class="fa fa-music" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Evènements</h2>
+                        <p>Venez découvrir l'ambiance du Jet et profiter d'un bon moment de détente.</p>
+                        <a href="{% url 'home:evenement' %}"><button type = "button" class = "btn">Plus</button></a>
+                    </div>
+                </article>
+                <!-- end of single service -->
+            </div>
+        </section>
+
+
+        <section class = "rooms sec-width" id = "rooms">
+            <div class = "title">
+                <h2>Bar-Restaurant <br>Brunch <br> Evènements <br> Célébrations </h2>
+            </div>
+            <div class = "rooms-container">
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "/static/images/restojet2.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Bar-Restaurant</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Chef étoilé
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Buffet
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Service en continue de 9h30 à 1h du matin
+                            </li>
+                        </ul>
+                        <p>La cuisine du chef Thomas, un délice pour les papilles. Venez découvrir les différentes saveurs et déguster les plats magiques concoctés par notre chef et son équipe.</p>
+                        <a href ="{% url 'home:menu_jour' %}"><button type = "button" class = "btn">Reserver</button></a>
+                    </div>
+                </article>
+                <!-- end of single room -->
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "/static/images/traiteurjet.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Célébrations</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Mariage, fiancailles, anniversaire...
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Traiteur pour vos cérémonies
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Le film de vos cérémonies
+                            </li>
+                        </ul>
+                        <p>Pour la réussite totale de votre célébration, nulle part ailleurs que le Jet. Nous mettons tout en place que tout soit parfait afin que vous profitiez pleinement du moment.</p>
+                        <button type = "button" class = "btn">Reserver</button>
+                    </div>
+                </article>
+                <!-- end of single room -->
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "/static/images/brunch.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Brunch</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Brunch
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                De 10h à 14h
+                            </li>
+
+                        </ul>
+                        <p>Venez tester et approuver le brunch en folie du jet! Goumandise, équilibre et tendance, c'est le pari que nous relevons avec la communion du gourmand et du veggie.</p>
+                        <a href ="#"><button type = "button" class = "btn">Reserver</button></a>
+                    </div>
+                </article>
+                <!-- end of single room -->
+                <!-- single room -->
+
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "/static/images/eventjet.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Evènements</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                After-Work & Apéro
+                            </li>
+
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Soirée
+                            </li>
+                        </ul>
+                        <p>Ne vous faites pas racontez l'ambiance du Jet.  Rejoignez-nous pour passer un moment de détente dans un des meilleurs spots de Dakar.</p>
+                        <button type = "button" class = "btn">Prochains évènements</button>
+                    </div>
+                </article>
+
+                <!-- end of single room -->
+            </div>
+        </section>
+
+
+        <section class = "customers" id = "customers">
+            <div class = "sec-width">
+                <div class = "title">
+                    <h2>Avis</h2>
+                </div>
+                <div class = "customers-container">
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>Best place in Dakar</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
+                        <img src = "/static/images/saida1.jpg" alt = "customer image">
+                        <span>NIASS Saïda, Dakar</span>
+                    </div>
+                    <!-- end of single customer -->
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>L'endroit pour passer un bon moment</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
+                        <img src = "/static/images/Amadu.JPG" alt = "customer image">
+                        <span>GUEYE Amadu, Dakar</span>
+                    </div>
+                    <!-- end of single customer -->
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>Nice Place</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
+                        <img src = "/static/images/lumi.JPEG" alt = "customer image">
+                        <span>GUEYE Lumi, Montpellier</span>
+                    </div>
+
+                                        <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>Mon cocon face à l'Atlantique</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
+                        <img src = "/static/images/Laurie.JPG" alt = "customer image">
+                        <span>Marie Martin, Montpellier</span>
+                    </div>
+                    <!-- end of single customer -->
+                </div>
+            </div>
+        </section>
+        <!-- end of body content -->
+
+
+               	<!-- Contact Section -->
+	<section id="contact" class="container colored">
+		<!-- Contact Inner -->
+		<div class="inner contact">
+
+			<!-- Form Area -->
+			<div class="contact-form">
+                <h3>Contact</h3>
+
+				<!-- Form -->
+				<form id="contact-us" method="post" action="#">
+					<!-- Left Inputs -->
+					<div class="col-xs-6 animated" data-animation="fadeInLeft" data-animation-delay="300">
+						<!-- Name -->
+						<input type="text" name="name" id="name" required="required" class="form" placeholder="Nom" />
+						<!-- Email -->
+						<input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+						<!-- Subject -->
+						<input type="text" name="subject" id="subject" required="required" class="form" placeholder="Objet" />
+					</div><!-- End Left Inputs -->
+					<!-- Right Inputs -->
+					<div class="col-xs-6 animated" data-animation="fadeInRight" data-animation-delay="400">
+						<!-- Message -->
+						<textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+					</div><!-- End Right Inputs -->
+					<!-- Bottom Submit -->
+					<div class="relative fullwidth col-xs-12">
+						<!-- Send Button -->
+						<button type="submit" id="submit" name="submit" class="btn">Envoyer</button>
+					</div><!-- End Bottom Submit -->
+					<!-- Clear -->
+					<div class="clear"></div>
+				</form>
+            </div>
+        </div>
+    </section>
+
+
+             <!-- footer -->
+        <footer class = "footer">
+            <div class = "footer-container">
+                <div>
+                    <h2>A propos </h2>
+                    <p>JetCafeBeach</p>
+                        <img src = "/static/images/logo.JPG" width="150" height="100" alt = "logo image">
+
+
+                </div>
+
+                <div>
+                    <h2>Administration</h2>
+                    <div class="f">
+                        <a href="{% url 'admin:index' %}">Admin</a><br>
+                    </div>
+
+                </div>
+
+                <div>
+                    <h2>Adresse</h2>
+                    <p>Rue ng-172, Dakar, Sénégal<br>
+                        <span>
+                            <i class = "fas fa-map-marker-alt"></i>
+                        </span>
+                    Itinéraire:
+                       <br> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.50891198275!2d-17.521926985629353!3d14.740334477589847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec112dbf3eb0f17%3A0x18cf60e13c73a58b!2sJet%20Caf%C3%A9%20Beach!5e0!3m2!1sfr!2sfr!4v1629058304824!5m2!1sfr!2sfr" width="200" height="90" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </p>
+
+                </div>
+
+                <div>
+                    <h2>Contat</h2>
+                    <div class = "contact-item">
+
+                        <p>
+                            JetCafeBeach, Dakar
+                        <p>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span>
+                            +221 77 989 73 86
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            jetcafebeach@gmail.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul class = "social-icons">
+                    <li class = "flex">
+                        <a href="https://twitter.com/hashtag/jetcafebeach" target="_blank"><i class = "fa fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li class = "flex">
+                        <a href="https://www.facebook.com/jetcafebeach" target="_blank"><i class = "fa fa-facebook fa-2x"></i></a>
+                    </li>
+                    <li class = "flex">
+                        <a href="https://www.instagram.com/jetcafebeach" target="_blank"><i class = "fa fa-instagram fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyright normal">Copyright © Noah & Lumi WebAgencey <span class="colored">Tous droits réservés.</span></p>
+        </footer>
+        <!-- end of footer -->
+
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>
