@@ -1,1 +1,1 @@
-web: gunicorn pythonJet.wsgi --log-file -
+web: gunicorn jetcafebeach.wsgi --log-file -
