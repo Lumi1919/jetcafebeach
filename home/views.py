@@ -41,7 +41,15 @@ def evenement(request):
 
 
 def brunch(request):
-    return render(request, 'brunch.html')
+    model = ReservationsRestaurant
+    form_class = ReservationsRestaurantForm
+    if request.method == "POST":
+        form = ReservationsRestaurantForm(request.POST).save()
+        return redirect('/confirmation')
+
+    else:
+        form = ReservationsRestaurantForm()
+    return render(request, 'brunch.html', {'form': form, 'dataReservationsHotel': ReservationsRestaurant.objects.all()})
 
 
 def ceremonie(request):
