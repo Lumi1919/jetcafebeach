@@ -13,6 +13,7 @@ urlpatterns = [
     path('menu_jour/', views.menu_jour, name="menu_jour"),
     path('evenement/', views.evenement, name="evenement"),
     path('brunch/', views.brunch, name="brunch"),
+    path('contact/', views.contact, name="contact"),
     path('ceremonie/', views.ceremonie, name="ceremonie"),
     path("confirmation/", views.confirmation_reservation,  name="confirmation_reservation")
 ]
